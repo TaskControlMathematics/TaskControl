@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/root_layout_send_request">
+
+    <EditText
+        android:id="@+id/phone_send_request"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="email"/>
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Должность"
+        android:textAlignment="center"
+        android:gravity="center_horizontal">
+
+    </TextView>
+
+    <Switch
+        android:id="@+id/post_send_request"
+        android:layout_width="250dp"
+        android:layout_height="59dp"
+        android:showText="true"
+        android:switchPadding="20dp"
+        android:textOff="Подчиненный"
+        android:textOn="Начальник" />
+</LinearLayout>

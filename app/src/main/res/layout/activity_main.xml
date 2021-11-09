@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:id="@+id/monthAndButton">
+
+        <Button
+            android:id="@+id/prevMonth"
+            android:layout_width="68dp"
+            android:layout_weight="0"
+            android:layout_height="match_parent"
+            android:background="#A3D1B2B2"
+            android:onClick="prevMonth"
+            android:text="пред."
+            android:textColor="@color/black"
+            android:textSize="10dp">
+
+        </Button>
+
+        <TextView
+            android:id="@+id/thisMonth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:layout_weight="0.5"
+            android:textColor="@color/black">
+
+        </TextView>
+
+        <Button
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:background="#A3D1B2B2"
+            android:onClick="nextMonth"
+            android:text="след."
+            android:layout_weight="0"
+            android:textColor="@color/black"
+            android:textSize="10dp">
+
+        </Button>
+
+    </LinearLayout>
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        android:id="@+id/nowCalendarView"
+        android:layout_width="match_parent"
+        android:layout_below="@id/monthAndButton"
+        android:layout_height="250dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:compactCalendarBackgroundColor="@color/white"
+        app:compactCalendarCurrentDayBackgroundColor="#B36200EA"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="#B30000FF"
+        app:compactCalendarEventIndicatorStyle="fill_large_indicator"
+        app:compactCalendarMultiEventIndicatorColor="#630A0A"
+        app:compactCalendarTargetHeight="250dp"
+        app:compactCalendarTextColor="@color/black"
+        app:compactCalendarTextSize="12sp"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+
+    <LinearLayout
+        android:id="@+id/parentLinearLayout"
+        android:layout_width="200dp"
+        android:layout_height="290dp"
+        android:orientation="vertical"
+        android:layout_below="@id/nowCalendarView">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal"
+            android:text="Задачи на день:"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutTasks"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_toRightOf="@id/parentLinearLayout"
+        android:layout_below="@id/nowCalendarView"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Важнейшая задача на неделю:"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:gravity="center_horizontal" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/linearWeekTasks">
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="120dp"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            android:text="просмотр задач"
+            app:backgroundTint="#3F51B5" />
+
+        <Button
+            android:id="@+id/buttonTask"
+            android:layout_width="120dp"
+            android:layout_height="110dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:onClick="changeOnTask"
+            android:text="Создать задачу"
+            app:backgroundTint="#403751" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="120dp"
+            android:layout_height="110dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:onClick="changeOnLogin"
+            android:text="личный кабинет"
+            app:backgroundTint="#403751" />
+    </LinearLayout>
+
+
+</RelativeLayout>

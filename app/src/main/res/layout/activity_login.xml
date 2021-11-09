@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/root_element"
+    tools:context=".Login">
+
+
+
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:text="войти"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        android:onClick="createSignInAlert"
+        />
+    <Button
+        android:id="@+id/buttonRegistration"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/buttonLogin"
+        android:layout_centerHorizontal="true"
+        android:text="зарегистрироваться"
+        android:onClick="createRegisterAlert"/>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="120dp"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            android:onClick="changeOnNow"
+            android:text="просмотр задач"
+            app:backgroundTint="#403751" />
+
+        <Button
+            android:id="@+id/buttonTask"
+            android:layout_width="120dp"
+            android:layout_height="110dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:onClick="changeOnTask"
+            android:text="Создать задачу"
+            app:backgroundTint="#403751" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="120dp"
+            android:layout_height="110dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="личный кабинет"
+            app:backgroundTint="#3F51B5" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TaskControl</string>
+    <string-array name="priority">
+        <item>Наименее важная</item>
+        <item>Важная</item>
+        <item>Очень важная</item>
+    </string-array>
+    <string name="HOST">10.0.2.2</string>
+</resources>
