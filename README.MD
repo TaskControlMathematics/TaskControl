@@ -32,7 +32,7 @@
 
 1.Клонировать проект с GiLlab 
 
-git clone https://git.labacloud.ru/taskcontrol/taskcontrol.git
+git clone https://github.com/TaskControlMathematics/TaskControl.git
 
 2.Открыть и собрать проект в Android Studio
 
